@@ -1,0 +1,7 @@
+# ninja log v5
+1	451	1712736709819423587	/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/build/temp.linux-x86_64-cpython-37/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/src/vision.o	351cc0743cf52cdb
+0	451	1712736709819423587	/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/build/temp.linux-x86_64-cpython-37/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/src/cpu/ms_deform_attn_cpu.o	cc51c8f688a9806b
+1	1701	1712736711067488574	/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/build/temp.linux-x86_64-cpython-37/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/src/cuda/ms_deform_attn_cuda.o	71392111a42093a2
+0	9046	1712737118160685778	/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/build/temp.linux-x86_64-cpython-37/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/src/cpu/ms_deform_attn_cpu.o	cc51c8f688a9806b
+1	21783	1712737130905349388	/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/build/temp.linux-x86_64-cpython-37/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/src/cuda/ms_deform_attn_cuda.o	71392111a42093a2
+1	24091	1712737133201468946	/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/build/temp.linux-x86_64-cpython-37/home/ldd/Desktop/Projects/UAVmatch/lib/models/stark_dual_deform/ops/src/vision.o	351cc0743cf52cdb

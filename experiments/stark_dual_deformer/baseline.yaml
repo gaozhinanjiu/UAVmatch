@@ -1,0 +1,109 @@
+DATA:
+  MAX_SAMPLE_INTERVAL: 200
+  MEAN:
+  - 0.485
+  - 0.456
+  - 0.406
+  SEARCH:
+    CENTER_JITTER: 0
+    FACTOR: 1.0
+    SCALE_JITTER: 0
+    SIZE: 480
+  STD:
+  - 0.229
+  - 0.224
+  - 0.225
+  TEMPLATE:
+    CENTER_JITTER: 0
+    FACTOR: 1.0
+    SCALE_JITTER: 0
+    SIZE: 480
+  TRAIN:
+    DATASETS_NAME:
+      - VTUAV_train
+      - VEDAI_train
+      - DroneVehicle_train
+    DATASETS_RATIO:
+      - 5
+      - 1
+      - 4
+    SAMPLE_PER_EPOCH: 20000
+  VAL:
+    DATASETS_NAME:
+      - VTUAV_val
+      - VEDAI_val
+      - DroneVehicle_val
+    DATASETS_RATIO:
+      - 5
+      - 1
+      - 4
+    SAMPLE_PER_EPOCH: 2000
+  AFF:
+    type:       affine #hom affine
+    random_t_hom: 0.3
+    rot_angle:  15      #旋转
+    sh_angle:   15      #剪切
+    lambda_1:   0.6     #缩放（-1，1）
+    lambda_2:   0.6
+    tx: 0.2              #平移(0,1)
+    ty: 0.2
+MODEL:
+  BACKBONE:
+    DILATION: false
+    OUTPUT_LAYERS:
+    - layer4
+    TYPE: resnet50
+  HEAD_TYPE: MLP                    # CORNER
+  HIDDEN_DIM: 256
+  NUM_OBJECT_QUERIES: 100
+  POSITION_EMBEDDING: sine
+  PREDICT_MASK: true       #返回中间层
+  TRANSFORMER:
+    DEC_LAYERS: 4
+    DIM_FEEDFORWARD: 2048
+    DIVIDE_NORM: false
+    DROPOUT: 0.1
+    ENC_LAYERS: 4
+    NHEADS: 8
+    PRE_NORM: false
+    NUM_FEATURE_LEVELS : 3
+    DEC_N_POINTS : 4
+    ENC_N_POINTS : 4
+    TWO_STAGE : false
+    TWO_STAGE_NUM_PROPOSALS : 6    #quare
+
+
+
+TRAIN:
+  BACKBONE_MULTIPLIER: 0.1
+  BATCH_SIZE: 4
+  DEEP_SUPERVISION: false
+  EPOCH: 100
+  FREEZE_BACKBONE_BN: true
+  FREEZE_LAYERS:
+  - conv1
+  - layer1
+  GRID_WEIGHT: 2.0
+  GRAD_CLIP_NORM: 0.1
+  L1_WEIGHT: 5.0
+  LR: 0.0001
+  LR_DROP_EPOCH: 40
+  NUM_WORKER: 30
+  OPTIMIZER: ADAMW
+  PRINT_INTERVAL: 50
+  SCHEDULER:
+    TYPE: step
+    DECAY_RATE: 0.1
+  VAL_EPOCH_INTERVAL: 2
+  WEIGHT_DECAY: 0.0001
+TEST:
+  EPOCH: 30
+  SEARCH_FACTOR: 1
+  SEARCH_SIZE: 480
+  TEMPLATE_FACTOR: 1
+  TEMPLATE_SIZE: 480
+
+
+
+
+
