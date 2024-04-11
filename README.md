@@ -58,6 +58,14 @@ python tracking/train.py --script stark_dual_deformer --config baseline_hom --sa
 python lib/train/run_training.py  --script stark_dual_deformer --config baseline
 python lib/train/run_training.py  --script stark_dual_deformer --config baseline_hom
 ```
+## Download Weight and Dataset
+```
+[Baidu Netdisk](https://pan.baidu.com/s/1WAYKxeJQDp_IeCW28qfpPA)   code：gfkd
+Weight   :  UAVmatch/weight.zip
+Dataset  :  UAVmatch/rtest.zip or rtest_hom.zip
+toolkit  :  UAVmatch/toolkit.zip
+```
+
 ## weight
 ```
 Affine transformer :  weight/stark_dual_deform/match.pth.tar
@@ -79,21 +87,21 @@ python tracking/test.py stark_dual_deformer baseline --dataset Dtest  --threads 
 
 
 ## Test and evaluate UAVmatch on benchmarks
-- DroneVehicle_pubilsh
+- DroneVehicle_pubilsh   [Baidu Netdisk](https://pan.baidu.com/s/1WAYKxeJQDp_IeCW28qfpPA)  code：gfkd
 ```
 python tracking/test.py stark_dual_deformer baseline --dataset DroneVehicle_norandom --threads 4 
 ```
 
-- DroneVehicle
+- DroneVehicle   [DroneVehicle](https://github.com/VisDrone/DroneVehicle)
 ```
 python tracking/test.py stark_dual_deformer baseline --dataset DroneVehicle --threads 4 
 ```
 
-- VTUAV
+- VTUAV          [VTUAV](https://zhang-pengyu.github.io/DUT-VTUAV/)        
 ```
 python tracking/test.py stark_dual_deformer baseline --dataset VTUAV --threads 4 
 ```
-- VEDAI
+- VEDAI         [VEDAI](https://downloads.greyc.fr/vedai/)
 ```
 python tracking/test.py stark_dual_deformer baseline --dataset VEDAI --threads 0 
 ```
