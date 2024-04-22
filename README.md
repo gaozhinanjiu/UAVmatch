@@ -1,4 +1,4 @@
-# A UAV visible-Infrared Dual-modality Image Alignment Benchmark
+# Visible-Infrared Image Alignment For UAVs:Benchmark and New Baseline
 
 
 ## Install the environment
@@ -58,7 +58,7 @@ python tracking/train.py --script stark_dual_deformer --config baseline_hom --sa
 python lib/train/run_training.py  --script stark_dual_deformer --config baseline
 python lib/train/run_training.py  --script stark_dual_deformer --config baseline_hom
 ```
-## Download Weight and Dataset
+## Download Weight，Dataset and Toolkit
 ```
 [Baidu Netdisk](https://pan.baidu.com/s/1WAYKxeJQDp_IeCW28qfpPA)  code：gfkd
 Weight   :  UAVmatch/weight.zip
